@@ -1,6 +1,6 @@
 <?php
 require('config.php');
-require('error.php');
+// require('error.php');
 class PHP_CRUD_UI {
 
     protected $settings;
