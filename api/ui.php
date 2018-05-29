@@ -36,6 +36,8 @@ class PHP_CRUD_UI {
                 $html .= '<li' . $active . '><a href="' . $this->url($base, $tag['name'], 'list') . '">' . $tag['name'] . '</a></li>';
             }
         }
+
+        $html .= '<li><a href="' . $url . '">API</a></li>';
         $html .= '</ul>';
         return $html;
     }
