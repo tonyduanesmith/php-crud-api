@@ -2735,7 +2735,7 @@ class PHP_CRUD_API {
 
 $api = new PHP_CRUD_API(array(
 	'dbengine'=>'MySQL',
-	'hostname'=>'localhost',
+	'hostname'=>$host,
 	'username'=>$username,
 	'password'=>$password,
 	'database'=>$database,
