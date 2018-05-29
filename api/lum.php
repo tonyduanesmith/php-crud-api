@@ -3,7 +3,7 @@ require('config.php');
 require('error.php');
 
 $connection = mysqli_connect($host,$username,$password,$database);
-$sql = "SELECT * FROM colourLookup";
+$sql = "SELECT * FROM colourlookup";
 $result = mysqli_query($connection, $sql);
 
 if(!$result){
@@ -13,7 +13,7 @@ if(!$result){
 foreach ($result as $key => $row) {
     $lum = luminance($row['red'], $row['green'], $row['blue']);
     $id = $row['ID'];
-    $sqlUpdate = "UPDATE colourLookup SET luminance=$lum WHERE ID LIKE $id";
+    $sqlUpdate = "UPDATE colourlookup SET luminance=$lum WHERE ID LIKE $id";
     $resultUpdate = mysqli_query($connection, $sqlUpdate);
 }
 
