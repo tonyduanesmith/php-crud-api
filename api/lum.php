@@ -5,6 +5,11 @@ require('error.php');
 $connection = mysqli_connect($host,$username,$password,$database);
 $sql = "SELECT * FROM colourLookup";
 $result = mysqli_query($connection, $sql);
+
+if(!$result){
+    print 'error:' . mysqli_error($connection);
+}
+
 foreach ($result as $key => $row) {
     $lum = luminance($row['red'], $row['green'], $row['blue']);
     $id = $row['ID'];
